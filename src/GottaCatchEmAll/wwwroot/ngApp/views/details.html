@@ -1,0 +1,24 @@
+﻿<h1>Pokemon Details</h1>
+<br class="break" />
+<br class="break" />
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="tc">Image</th>
+                    <th class="tc">Name</th>
+                    <th class="tc">Type</th>
+                    <th class="tc">Evolves To</th>
+                    <th class="tc">Evolution Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="{{c.pokemon.image}}" alt="HTML5 Icon" style="width:128px;height:128px;" /></td>
+                    <td class="color">{{c.pokemon.name}}</td>
+                    <td class="color">{{c.pokemon.type}}</td>
+                    <td class="color">{{c.pokemon.evolvesInto}}</td>
+                    <td><img src="{{c.pokemon.image2}}" alt="HTML5 Icon" style="width:128px;height:128px;" /></td>
+                </tr>
+            </tbody>
+        </table>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app="GottaCatchEmAll">
+<head>
+    <link href="~/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <title>Pokemons</title>
+    <base href='/' />
+</head>
+<body>
+
+   <nav id="top"><a id="sizing" ui-sref="master"> Home </a>|<a id="sizing" ui-sref="about"> About </a><input id="ipt" placeholder="Search Pokemon" type="text"/></nav>
+    <br />
+    <br />
+    <ui-view>
+        @* CONTENT!!!! *@
+    </ui-view>
+
+    <script src="~/bower_components/angular/angular.min.js"></script>
+    <script src="~/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="~/ngApp/controllers/controllers.js"></script>
+    <script src="~/ngApp/app.js"></script>
+
+    <div id="footer"> <a href="https://www.facebook.com/Limitless-Innovations-1652307435063732/?ref=aymt_homepage_panel"/><img id="im1" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT6WSn3NxZDZH1IufDlSkv5ef5667yTFjEh9jjaI2_GdkEuCvWLKA" alt="HTML5 Icon" style="width:50px;height:40px;" /> </a>
+        <a href="https://github.com/wakkasha"> <img id="im2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAY1BMVEX///8AAADb29vy8vLv7++6urqurq47Ozv6+vri4uJVVVVlZWX19fUTExNFRUVZWVmUlJQfHx/T09OMjIxOTk6kpKR/f39AQEALCwuenp51dXXHx8dvb28ZGRnp6ekvLy8mJiZWr9IKAAAE9ElEQVRoge1a2aKiMAyFyi4iQgFZBP//K4fFBa89bQP4NJy3GW96SJtmawxjx44dO3b8RwjbOour6G6OOBVNWtq+9XNaz3cqfrmaf3EpmoyFPyT2y/MX6Qw8Zd5PeENHyjuhyNrNia24UxOPW1/5mxKHmSbxgGu6Iblz0ScekR62IU44kbiHa2/BHJ/ozD2a1VeNLVB5wqVex2zfljL3iNcwZyuIe+TLN71ax9z7t4WWHjZrmU0zWnTFt2BeyL0Jc+/V6eF09Tk/EVHPe6Vtz1HRIqm9HXPv0SnMbI0n+QbFoYu85+Wu48xvd8F/XvVNLRYtmhhtXUo9+qVxkoMXCH456h53IlLPnb6cpUj3sz39RSr6MVux3eb56Y/9fEhIr7eu4EHAI3fKT137qZgj3BC9lE0oa+azXalim/nW+C2e5bM6y+P35WVC8UqH+SDOhvQjoFC8NxU1gDMpV1JrWJoFcs+11BpqCy+WSXFJYAGukgtRwt3oXk0PLHBVqS027x6Rrkey0Aq5QhDWVYF27ENB7yRfwUfMpn624R3BEvIoUiJmR5u5dzlgjUb6wWi/A1K4z8WL3GTeFO43rYRCy8hWQfZNza/A5slsHOWCpBTHgEYe4WokRJmAju+fI/lu9Ay44GvSohKems+iQIAPuxZ/rHkhl22iLMmUxSDkhwoqswG8CrYzFLUCMjWw14gqsIAaOBUTCkRow8lNQKQEFBCl7wNuZDNDEQQKgL83TTI1igXQi0NqqksJXbAQI1NTHamPShRN6lMXBecRnFgiG3UxSQbcvS+h5mUcx+mAmNpwtdOHYL9At4B6wt2N+tJKt1x7IOABL1xBkQ5V+HNCPC2dMh50J6rtDOqWvagT55+BBB5c8UkdBd2rnKc4NPYMgLe7e/ykhjKyfpV+4QP9iYxaWJWTuZH/7uFCIZgKj0i1blgo+35cZStaVkd4Nd6wpE1GXKT7qjeOXGHoISzZJuBCwiqEAh1/3dBbZVtw39tMLP/CTbJt4t3ifj77wW1KUTQ5ZI3yQcqVVKsgOTsltfO57h97CTUe/r6lPiDu/gx62/U8hfkq3OR34wlZzQhrgNTI2TsGu18R39N6GJIaKbyUzEjb14ELgonCtEfIm0hox82zEea18whGgq/3UV43g7xG9+D1qI2W5YmTxVkmcqkWSolmUDQrYfc/sgwvsSJW2dloqMlwR+th61tbj1raVDAkFd90M0Ij9LwxPw0GQuc4HNL1oEWtfGjEzy2fueGM+qRFjaPWEz6oNnsE9cxEydQaPRFZ0IvyMVtqF1BzjTICt85eSBZQazWCpLnKUmq93O6gPLYF1Jqlk/J9jU6tas2+oHpJJVPrv6mGikSJTE2oVOttqUlDC6ih85d6MFw2VP4y6iOFWZrHjyEoGWc/4uHpjI3VARbgxMdzmK9MWrCuG0nHJ5HCbBLPQgH7qpG9f+KA2knmNY2DPpDZ5XH6lzP6oA7ko8rXFgF8yE3CopkcX5HQ6+C6cBrIWq33kt2ecFg5psHJFvaGp45iEhzXTXjaOGlRYdXg1QBL0p6QoVh8zG94GXWycEC+zThtS7a2YAOVH0hIu843mWl8wku4rr259uazwyzXmcZpVg4zAhzsRj6bdHS2nxh+obXzSGjwN7dy/N/MSb8R+naZf3h3t4od9vvZ9Bla1uPnmu7YsWPHDoh/kBpFIV1r5GEAAAAASUVORK5CYII=" alt="HTML5 Icon" style="width:50px;height:40px;" /></a>
+    
+    <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home"/>   <img id="im3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAAB3CAMAAADGpwcrAAAAY1BMVEX///8AAABNTU2IiIjT09Ourq5QUFAWFhaamprX19fk5OTn5+fd3d3Pz888PDz8/Py/v7+AgIBsbGzJycn29vbu7u4rKyu2trYfHx9FRUV4eHgODg6Pj482NjZaWlpgYGCkpKQWnEVgAAADF0lEQVR4nO2c4ZKqMAxGrYCIICIIKKD4/k95XXe4gvZj2Wlp3JrzuzA5UkNoA4sFwzD2cMi8xmnWZUAdyFwcksuxFnfqwgmpw5mDZCkGNPZZ7mvxRLyhjkkvu/TZ8Ia/pQ5LK45E8XYlbZquW6miECl1YBo5AkfhUkemjQQpWnQh99DRmtyaX6CjKKmD00R0xo5X6uA04cKUI8SaOjhNuD52bKiD00TwAddxs8SOHnVwmjjIitVv/IQ6OF000PGUU8emixAmHVtSzg04WQ/UkekjB5nVloxzJ5PO1r1Fl3Ehf/RI7VK8FQKnJ8PCltt/j9wr+oqOnWuseVZ95x6/LcMddTQzkofW3PYZhmEY5q3IIzdLSq8sk20Q2lb0fpF7TturCk9pU75FVVEtV1LiwSg3BqMeiz47tx1UvXfqogroS0O4MDcYhXbwHo/SWYuGrDJqSz2Oh9f99h5pRCDWQ4vjNh4x/OJqXqzHNEd31BFvYv6nosyxGhyTsXnakRL+KdUdywmGNy50t5FpjgF2jKYpCtESGao75qupjnQr79Mc4cXycEPBCzXVLpGiI7zzy1gSJVdFx99BNFunOW70OAqa3GrW0Xljx1CTY0xSuZp1pGlsMuzYUpR0+hzrIj6dfyxdKfpidTmmXhZEUZB5uFPkDsVk1eOYPja7duFoXXAxbqjH8fxUpHkjY48Ef0gNjvHLnuyIpE+wgavueJI0867xcIKGEXVHWeN5/txi8ICg1FF2lMd8heMrE1ZDVB1RWx08gKAtRtURtblU6ACCdR1FxwIV2XA9UpaiZkbRcYnOC5+q4a8yH4rPj/BNlw1aOi/M3yAVHeHqBexwPpp/yUnREXbW7dCCnf/nHHHVIn/n0C5HVM6x4yywYwc7SmFHo7BjBztKYUejqO4jwxOzo1HYsYMdpbCjUdix4xMcR/rlEOxoFHbsYEcp7GgUduz4BMfxdx+ksKNR2LGDHaWwo1HYsePndzxfYEejsGMHO0phR6N8giNsGB6MyvQ5Enww++rI2Q9GRXswCn+PPgGHOLZ8S5phPpl/gkgzEavyWI0AAAAASUVORK5CYII=" alt="HTML5 Icon" style="width:50px;height:40px;" /></a>
+    Copyright &copy; 2017 Shawn Walker</div>
+</body>
+</html>
